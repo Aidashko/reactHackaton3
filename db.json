@@ -1,0 +1,10 @@
+{
+  "posts": [
+    {
+      "title": "Aww",
+      "price": 200,
+      "img": "igual",
+      "type": "animal"
+    }
+  ]
+}
