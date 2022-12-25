@@ -13,8 +13,9 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
-const Navbar = ({ getCart }) => {
+const Navbar = () => {
   const Search = styled("div")(({ theme }) => ({
     position: "relative",
     borderRadius: theme.shape.borderRadius,
@@ -89,21 +90,30 @@ const Navbar = ({ getCart }) => {
                 inputProps={{ "aria-label": "search" }}
               />
             </Search>
-
             <Box sx={{ flexGrow: 1 }} />
-
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
-              <Button sx={{ display: { md: "flex" } }}>About Us</Button>
-              <Button sx={{ display: { md: "flex" } }}>Products</Button>
-              <Button>Login</Button>
+              <Link to="/about">
+                <Button sx={{ display: { md: "flex" } }}>About Us</Button>
+              </Link>
+              <Link to="/">
+                <Button sx={{ display: { md: "flex" } }}>Products</Button>
+              </Link>
+              <Link to="/nft/create">
+                <Button sx={{ display: { md: "flex" } }}>Events</Button>
+              </Link>
+              <Button sx={{ display: { md: "flex" } }}>Login</Button>
               <IconButton
                 size="large"
                 aria-label="show 4 new mails"
                 color="inherit"
               >
-                <Badge badgeContent={4} color="error">
-                  <ShoppingCartIcon onClick={() => getCart()} />
-                </Badge>
+                <Link to="/cart">
+                  <Button sx={{ my: 2, color: "white" }}>
+                    <Badge>
+                      <ShoppingCartIcon />
+                    </Badge>
+                  </Button>
+                </Link>
               </IconButton>
               <IconButton
                 size="large"

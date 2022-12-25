@@ -1,23 +1,22 @@
-import Home from "./components/Home/Home.jsx";
 import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
-import Products from "./components/Products/Products";
-import Footer from "./components/Footer/Footer.jsx";
-import Add from "./components/Add/Add.jsx";
-import ProductContextProvider from "./ProductContextProvider.js";
-import MyRoutes from "./MyRoutes.js";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import NftListing from "./components/Crud/NftListing.jsx";
+import NftCreate from "./components/Crud/NftCreate.jsx";
+import NftDetail from "./components/Crud/NftDetails.jsx";
+import NftEdit from "./components/Crud/NftDetails.jsx";
+import Navbar from "./components/Navbar/Navbar.jsx";
 
 function App() {
   return (
     <div className="App">
-      <ProductContextProvider>
-        <Navbar />
-        <Home />
-        <Products />
-        <Add />
-        <Footer />
-        <MyRoutes />
-      </ProductContextProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Navbar />} />
+          <Route path="/crud" element={<NftListing />} />
+          <Route path="/nft/create" element={<NftCreate />} />
+          <Route path="/nft/edit/:nid" element={<NftEdit />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

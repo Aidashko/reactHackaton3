@@ -1,10 +1,25 @@
 {
-  "posts": [
+  "nfts": [
     {
-      "title": "Aww",
-      "price": 200,
-      "img": "igual",
-      "type": "animal"
+      "name": "Aidash",
+      "email": "aidankaa13@gmail.com",
+      "phone": "2109984780",
+      "active": true,
+      "id": 1
+    },
+    {
+      "name": "Ricky Ponting",
+      "email": "rp@in.com",
+      "phone": "98899090",
+      "active": true,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Robert",
+      "email": "robert@in.com",
+      "phone": "908908767",
+      "active": false
     }
   ]
 }
