@@ -35,12 +35,14 @@ const EmpCreate = () => {
         <div className="offset-lg-3 col-lg-6">
           <form className="container" onSubmit={handlesubmit}>
             <div className="card" style={{ textAlign: "left" }}>
-              <div className="card-title">
-                <h2>Stay in the loop</h2>
-                <p>
+              <div className="card-title " style={{ textAlign: "center" }}>
+                <h2 style={{ fontStyle: "normal" }}>Stay in the loop</h2>
+                <p style={{ fontStyle: "oblique" }}>
                   Join our mailing list to stay in the loop with our newest
+                  <br />
                   feature releases, NFT drops, and tips and tricks for
-                  navigating OpenSea. Email address
+                  <br />
+                  navigating Doodles.
                 </p>
               </div>
               <div className="card-body">
