@@ -2,11 +2,12 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NftListing from "./components/Crud/NftListing.jsx";
 import NftCreate from "./components/Crud/NftCreate.jsx";
-import NftEdit from "./components/Crud/NftDetails.jsx";
+import NftEdit from "./components/Crud/NftEdit.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Home from "./components/Home/CarouselBox.jsx";
 import AuthPage from "./pages/AuthPage";
 import AuthContextProvider from "./contexts/AuthContextProvider";
+import Footer from "./components/Footer/Footer";
 
 const PUBLIC_ROUTES = [{ link: "/auth", element: <AuthPage />, id: 3 }];
 
@@ -25,6 +26,8 @@ function App() {
           ))}
         </Routes>
       </AuthContextProvider>
+      <Home />
+      <Footer />
     </div>
   );
 }

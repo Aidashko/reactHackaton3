@@ -12,10 +12,17 @@ import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import MoreIcon from "@mui/icons-material/MoreVert";
-import { Button } from "@mui/material";
+import {
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+} from "@mui/material";
 import { Link } from "react-router-dom";
 import { Carousel } from "bootstrap";
 import spectrum from "../../assets/spectrum.avif";
+import { Container } from "react-bootstrap";
 
 const Navbar = () => {
   const Search = styled("div")(({ theme }) => ({
@@ -97,7 +104,7 @@ const Navbar = () => {
               <Link to="/about">
                 <Button sx={{ display: { md: "flex" } }}>About Us</Button>
               </Link>
-              <Link to="/">
+              <Link to="/home">
                 <Button sx={{ display: { md: "flex" } }}>Products</Button>
               </Link>
               <Link to="/nft/create">

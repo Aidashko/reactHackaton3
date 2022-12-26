@@ -42,7 +42,7 @@ const EmpCreate = () => {
                   <br />
                   feature releases, NFT drops, and tips and tricks for
                   <br />
-                  navigating Doodles.
+                  navigating 1Ath.Studio.
                 </p>
               </div>
               <div className="card-body">
