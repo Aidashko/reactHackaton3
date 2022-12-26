@@ -4,7 +4,7 @@ import NftListing from "./components/Crud/NftListing.jsx";
 import NftCreate from "./components/Crud/NftCreate.jsx";
 import NftEdit from "./components/Crud/NftDetails.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
-import Home from "./pages/Home";
+import Home from "./components/Home/CarouselBox.jsx";
 import AuthPage from "./pages/AuthPage";
 import AuthContextProvider from "./contexts/AuthContextProvider";
 
@@ -16,6 +16,7 @@ function App() {
       <AuthContextProvider>
         <Routes>
           <Route path="/" element={<Navbar />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/crud" element={<NftListing />} />
           <Route path="/nft/create" element={<NftCreate />} />
           <Route path="/nft/edit/:nid" element={<NftEdit />} />
