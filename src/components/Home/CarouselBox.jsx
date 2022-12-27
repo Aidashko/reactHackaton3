@@ -7,7 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import { Container, Button, CarouselItem } from "react-bootstrap";
+import { Container, Button } from "react-bootstrap";
 import "./Home.css";
 
 const CarouselBox = () => {
@@ -257,11 +257,12 @@ const CarouselBox = () => {
           </div>
           <p>
             1ATH.Studio stands for One All Time High Studio meaning that we're
-            targeted to become NFT utility niche leaders.
-            <br /> We're a well-connected and well-funded team of creative
-            experts with vast experience who connect NFT and entertainment
-            industries. <br /> We've entered into a wide-range of valuable
-            partnerships with established well-performing brands and have a
+            targeted <br /> to become NFT utility niche leaders. We're a
+            well-connected and well-funded team of creative experts <br /> with
+            vast experience who connect NFT and entertainment industries. <br />{" "}
+            We've entered into a wide-range of valuable partnerships with
+            established well-performing brands and have a
+            <br />
             long-term pipeline of innovative high-tech products.
           </p>
           <button>Learn More</button>

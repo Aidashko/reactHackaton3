@@ -21,5 +21,28 @@
       "phone": "908908767",
       "active": false
     }
+  ],
+  "products": [
+    {
+      "title": "lycoris recoil",
+      "price": 987,
+      "img": "https://static.zerochan.net/Lycoris.Recoil.full.3706694.jpg",
+      "type": "action",
+      "id": 2
+    },
+    {
+      "title": "akame ga kill",
+      "price": 123,
+      "img": "https://i.pinimg.com/originals/7b/ef/90/7bef90845b56b5c4d04db30fa196fd0c.jpg",
+      "type": "fantasy",
+      "id": 3
+    },
+    {
+      "title": "monogatari",
+      "price": 111,
+      "img": "https://images.alphacoders.com/244/244443.jpg",
+      "type": "daily",
+      "id": 4
+    }
   ]
 }

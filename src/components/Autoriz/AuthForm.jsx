@@ -50,7 +50,7 @@ const AuthForm = () => {
   return (
     <div>
       <ThemeProvider theme={theme}>
-        <Container component="main" maxWidth="xs">
+        <Container className="auth" component="main" maxWidth="xs">
           <CssBaseline />
           <Box
             sx={{

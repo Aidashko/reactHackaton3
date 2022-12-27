@@ -12,17 +12,8 @@ import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import MoreIcon from "@mui/icons-material/MoreVert";
-import {
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-} from "@mui/material";
+import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
-import { Carousel } from "bootstrap";
-import spectrum from "../../assets/spectrum.avif";
-import { Container } from "react-bootstrap";
 
 const Navbar = () => {
   const Search = styled("div")(({ theme }) => ({
@@ -86,7 +77,7 @@ const Navbar = () => {
               component="div"
               sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
             >
-              NFTs
+              1ATH.Studio
               <img id="logo" src="" alt="" />
             </Typography>
             {/* SEARCH */}
@@ -100,18 +91,21 @@ const Navbar = () => {
               />
             </Search>
             <Box sx={{ flexGrow: 1 }} />
-            <Box sx={{ display: { xs: "none", md: "flex" } }}>
+            <Box
+              className="buttons"
+              sx={{ display: { xs: "none", md: "flex" } }}
+            >
               <Link to="/about">
-                <Button sx={{ display: { md: "flex" } }}>About Us</Button>
+                <Button sx={{ display: { md: "flex" } }}>ABOUT US</Button>
               </Link>
               <Link to="/home">
-                <Button sx={{ display: { md: "flex" } }}>Products</Button>
+                <Button sx={{ display: { md: "flex" } }}>HOME</Button>
               </Link>
               <Link to="/nft/create">
-                <Button sx={{ display: { md: "flex" } }}>Events</Button>
+                <Button sx={{ display: { md: "flex" } }}>EVENTS</Button>
               </Link>
               <Link to="/auth">
-                <Button sx={{ display: { md: "flex" } }}>Login</Button>
+                <Button sx={{ display: { md: "flex" } }}>SIGN UP</Button>
               </Link>
               <IconButton
                 size="large"
