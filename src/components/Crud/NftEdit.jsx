@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
-const EmpEdit = () => {
-  const { empid } = useParams();
+const NftEdit = () => {
+  const { nid } = useParams();
 
   //const [empdata, empdatachange] = useState({});
 
   useEffect(() => {
-    fetch("http://localhost:8000/nfts" + empid)
+    fetch("http://localhost:8000/nfts/" + nid)
       .then((res) => {
         return res.json();
       })
@@ -36,7 +36,7 @@ const EmpEdit = () => {
     e.preventDefault();
     const empdata = { id, name, email, phone, active };
 
-    fetch("http://localhost:8000/nfts" + empid, {
+    fetch("http://localhost:8000/nfts/" + nid, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(empdata),
@@ -55,8 +55,8 @@ const EmpEdit = () => {
         <div className="offset-lg-3 col-lg-6">
           <form className="container" onSubmit={handlesubmit}>
             <div className="card" style={{ textAlign: "left" }}>
-              <div className="card-title">
-                <h2>Employee Edit</h2>
+              <div className="card-title" style={{ textAlign: "center" }}>
+                <h2>NFT Edit</h2>
               </div>
               <div className="card-body">
                 <div className="row">
@@ -81,7 +81,7 @@ const EmpEdit = () => {
                         onChange={(e) => namechange(e.target.value)}
                         className="form-control"
                       ></input>
-                      {name.length == 0 && validation && (
+                      {name.length === 0 && validation && (
                         <span className="text-danger">Enter the name</span>
                       )}
                     </div>
@@ -89,7 +89,7 @@ const EmpEdit = () => {
 
                   <div className="col-lg-12">
                     <div className="form-group">
-                      <label>Email</label>
+                      <label>Email adress</label>
                       <input
                         value={email}
                         onChange={(e) => emailchange(e.target.value)}
@@ -100,7 +100,7 @@ const EmpEdit = () => {
 
                   <div className="col-lg-12">
                     <div className="form-group">
-                      <label>Phone</label>
+                      <label>Phone number</label>
                       <input
                         value={phone}
                         onChange={(e) => phonechange(e.target.value)}
@@ -140,4 +140,4 @@ const EmpEdit = () => {
   );
 };
 
-export default EmpEdit;
+export default NftEdit;

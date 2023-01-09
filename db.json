@@ -1,11 +1,10 @@
 {
   "nfts": [
     {
+      "id": 1,
       "name": "Aidash",
       "email": "aidankaa13@gmail.com",
-      "phone": "2109984780",
-      "active": true,
-      "id": 1
+      "phone": "2109984780"
     },
     {
       "name": "Ricky Ponting",

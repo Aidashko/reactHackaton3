@@ -5,9 +5,6 @@ const EmpListing = () => {
   const [empdata, empdatachange] = useState(null);
   const navigate = useNavigate();
 
-  const LoadDetail = (id) => {
-    navigate("/nft/detail/" + id);
-  };
   const LoadEdit = (id) => {
     navigate("/nft/edit/" + id);
   };
@@ -79,7 +76,7 @@ const EmpListing = () => {
                           onClick={() => {
                             LoadEdit(item.id);
                           }}
-                          className="btn btn-primary"
+                          className="btn btn-success"
                         >
                           Edit
                         </a>
